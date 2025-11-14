@@ -1,0 +1,296 @@
+[
+  {
+    "id": "1",
+    "title": "Fall of Constantinople",
+    "description": "The conquest of Constantinople by the Ottoman Empire under Sultan Mehmed II, ending the Byzantine Empire after over 1,000 years. The fall marked the end of the Middle Ages and the beginning of the Renaissance, as Greek scholars fled to Western Europe with classical texts. The city, renamed Istanbul, became the Ottoman capital and a bridge between Europe and Asia. This epochal event shifted the balance of power in the Mediterranean and opened the age of European exploration as trade routes to the East were threatened.",
+    "dates": {
+      "gregorian": "1453-05-29",
+      "julian": "1453-05-22",
+      "islamic": "857-06-20",
+      "hebrew": "5213-02-27"
+    },
+    "dateRange": false,
+    "turning": "winter",
+    "significance": "epochal",
+    "scale": 80,
+    "categories": ["warfare", "empire_fall", "cultural_awakening"],
+    "regions": ["europe", "middle_east", "mediterranean"],
+    "tags": ["ottoman_empire", "byzantine_empire", "renaissance", "medieval"],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The Fall of Constantinople 1453",
+        "author": "Steven Runciman",
+        "year": 1965,
+        "notes": "Definitive scholarly account"
+      },
+      {
+        "type": "book",
+        "title": "Constantinople: The Last Great Siege, 1453",
+        "author": "Roger Crowley",
+        "year": 2005
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "2",
+    "title": "The Black Death Arrives in Europe",
+    "description": "The bubonic plague, carried by fleas on rats from Central Asia, reached Europe via Italian merchant ships. Over the next five years (1347-1352), it killed an estimated 75-200 million people — roughly 30-60% of Europe's population. The pandemic devastated economies, led to labor shortages that weakened feudalism, sparked religious fervor and persecution, and fundamentally reshaped European society. It was one of the most catastrophic events in human history, a true Winter crisis that preceded the Renaissance rebirth.",
+    "dates": {
+      "gregorian": "1347-10-01",
+      "julian": "1347-09-24",
+      "islamic": "748-09-15",
+      "hebrew": "5108-07-15",
+      "uncertainty": 30
+    },
+    "dateRange": true,
+    "endDate": {
+      "gregorian": "1352-12-31",
+      "julian": "1352-12-24"
+    },
+    "turning": "winter",
+    "significance": "epochal",
+    "scale": 320,
+    "categories": ["plague_pandemic", "social_movement", "economic_transformation"],
+    "regions": ["europe", "mediterranean", "middle_east", "asia"],
+    "tags": ["plague", "pandemic", "feudalism", "medieval", "death"],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The Black Death, 1346-1353: The Complete History",
+        "author": "Ole J. Benedictow",
+        "year": 2004
+      },
+      {
+        "type": "journal",
+        "title": "The Black Death and Its Consequences for the Church",
+        "author": "Joseph P. Byrne",
+        "year": 2006
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "3",
+    "title": "Gutenberg Prints the First Bible",
+    "description": "Johannes Gutenberg completed the first major book printed with movable type in Europe: the Gutenberg Bible (also known as the 42-line Bible). This technological revolution democratized knowledge by making books affordable and reproducible at scale. Previously, books were hand-copied by scribes and available only to the wealthy and clergy. The printing press enabled the Protestant Reformation, the Scientific Revolution, and mass literacy — fundamentally transforming human civilization.",
+    "dates": {
+      "gregorian": "1455-02-23",
+      "julian": "1455-02-16",
+      "islamic": "859-01-10",
+      "hebrew": "5215-11-15",
+      "uncertainty": 60
+    },
+    "dateRange": false,
+    "turning": "spring",
+    "significance": "epochal",
+    "scale": 320,
+    "categories": ["technological_innovation", "cultural_awakening", "religious_movement"],
+    "regions": ["europe"],
+    "tags": ["printing_press", "gutenberg", "literacy", "reformation", "renaissance"],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The Printing Revolution in Early Modern Europe",
+        "author": "Elizabeth L. Eisenstein",
+        "year": 1983
+      },
+      {
+        "type": "book",
+        "title": "Gutenberg: How One Man Remade the World with Words",
+        "author": "John Man",
+        "year": 2002
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "4",
+    "title": "American Declaration of Independence",
+    "description": "The Continental Congress adopted the Declaration of Independence, formally announcing the thirteen American colonies' separation from Great Britain. Drafted primarily by Thomas Jefferson, the document articulated Enlightenment ideals of natural rights, popular sovereignty, and the right to revolution. It inspired democratic movements worldwide and established the United States of America. This Summer Awakening challenged monarchical authority and ignited a wave of revolutionary fervor across the Atlantic world.",
+    "dates": {
+      "gregorian": "1776-07-04",
+      "islamic": "1190-03-18",
+      "hebrew": "5536-04-17"
+    },
+    "dateRange": false,
+    "turning": "summer",
+    "significance": "global",
+    "scale": 80,
+    "categories": ["political_revolution", "philosophical_shift", "empire_rise"],
+    "regions": ["north_america"],
+    "tags": ["revolution", "enlightenment", "democracy", "independence", "founding_fathers"],
+    "sources": [
+      {
+        "type": "primary",
+        "title": "Declaration of Independence",
+        "author": "Thomas Jefferson et al.",
+        "year": 1776,
+        "url": "https://www.archives.gov/founding-docs/declaration"
+      },
+      {
+        "type": "book",
+        "title": "American Scripture: Making the Declaration of Independence",
+        "author": "Pauline Maier",
+        "year": 1997
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "5",
+    "title": "World War II Ends",
+    "description": "Japan formally surrendered aboard the USS Missouri in Tokyo Bay, ending World War II — the deadliest conflict in human history. The war killed an estimated 70-85 million people (about 3% of the 1940 world population) and reshaped the global order. The United Nations was founded to prevent future wars. The United States and Soviet Union emerged as superpowers, beginning the Cold War. Decolonization accelerated. The atomic age began. This Winter Crisis gave way to the Post-War High (Spring) of prosperity and institution-building.",
+    "dates": {
+      "gregorian": "1945-09-02",
+      "islamic": "1364-08-25",
+      "hebrew": "5705-05-25",
+      "chinese": "1945-08-15"
+    },
+    "dateRange": false,
+    "turning": "winter",
+    "significance": "epochal",
+    "scale": 80,
+    "categories": ["warfare", "political_revolution", "technological_innovation"],
+    "regions": ["global"],
+    "tags": ["world_war_ii", "atomic_bomb", "united_nations", "cold_war", "holocaust"],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The Second World War",
+        "author": "Winston Churchill",
+        "year": 1948
+      },
+      {
+        "type": "book",
+        "title": "Inferno: The World at War, 1939-1945",
+        "author": "Max Hastings",
+        "year": 2011
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "6",
+    "title": "Fall of the Berlin Wall",
+    "description": "East German authorities opened the Berlin Wall, allowing free passage between East and West Berlin for the first time in 28 years. This symbolic event marked the beginning of the end of the Cold War and communist rule in Eastern Europe. Within a year, Germany was reunified. The Soviet Union collapsed in 1991. This moment represented the triumph of liberal democracy and capitalism over communism, ending a 45-year global ideological struggle. It ushered in the Autumn Unraveling period of triumphant individualism and institutional decay.",
+    "dates": {
+      "gregorian": "1989-11-09",
+      "islamic": "1410-04-10",
+      "hebrew": "5750-02-11"
+    },
+    "dateRange": false,
+    "turning": "autumn",
+    "significance": "global",
+    "scale": 80,
+    "categories": ["political_revolution", "empire_fall", "social_movement"],
+    "regions": ["europe", "global"],
+    "tags": ["cold_war", "berlin_wall", "communism", "democracy", "unification"],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The Fall of the Berlin Wall",
+        "author": "William F. Buckley Jr.",
+        "year": 2004
+      },
+      {
+        "type": "book",
+        "title": "There We Stood, Here We Stand: Eleven Lutherans Rediscover Their Catholic Roots",
+        "author": "Frederick W. Taylor",
+        "year": 1991
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  }
+]

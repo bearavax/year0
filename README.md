@@ -75,6 +75,39 @@ Then open http://localhost:8000 in your browser.
 - [ ] Search and filter
 - [ ] Export/share functionality
 
+## Documentation
+
+### 📚 Core Documents
+- **[ROADMAP.md](ROADMAP.md)** - Complete development plan: Internet Archive meets Library of Alexandria
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute (Wikipedia-style collaboration)
+- **[docs/PATTERNS.md](docs/PATTERNS.md)** - Pattern recognition system and historical echoes
+
+### 📐 Technical Specifications
+- **[data/schema.js](data/schema.js)** - Event database schema and validation
+- **[data/seed-events.json](data/seed-events.json)** - Initial historical events dataset
+
 ## Philosophy
 
+> *"Those who cannot remember the past are condemned to repeat it."* — George Santayana
+
+Year0 stands at the confluence of the **Internet Archive's** mission to preserve all human knowledge and the **Library of Alexandria's** vision of universal scholarship.
+
 Different cultures measure time differently, yet patterns emerge across all systems. Year0 seeks to reveal these patterns by presenting history through multiple lenses simultaneously, honoring the wisdom that time is both linear and cyclical.
+
+**This is not just a timeline. It is a digital sanctuary for historical memory, designed to endure as long as humanity remembers its past.**
+
+## Contributing
+
+We are building the universal memory of humanity. See [CONTRIBUTING.md](CONTRIBUTING.md) for how you can help:
+
+- **Developers:** Build calendar engines, optimize rendering, implement pattern recognition
+- **Historians:** Add events, verify dates, ensure accuracy
+- **Designers:** Improve UX and accessibility
+- **Translators:** Make Year0 available in every language
+- **Everyone:** Document history, correct errors, share the vision
+
+## License
+
+- **Code:** MIT License
+- **Content:** CC BY-SA 4.0
+- **Philosophy:** Knowledge is free, forever

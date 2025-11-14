@@ -38,13 +38,22 @@ Events can be mapped across different calendar systems:
 
 ## Features
 
-- Interactive conch shell spiral visualization
-- Multiple time scale views (20yr to 5000yr+ cycles)
-- Four-season color coding
-- Pan and zoom navigation
-- Current position indicator
-- Multi-calendar system support (coming soon)
-- Community contributions (coming soon)
+### ✅ Phase I Complete (Foundation)
+- **Interactive conch shell spiral visualization** - Beautiful nested rings representing fractal time scales
+- **Historical event markers** - 6 seed events positioned on the spiral by year and turning
+- **Event detail modals** - Click any event to see full details, multi-calendar dates, and sources
+- **Hover interactions** - Event names appear on hover with glow effects
+- **Multiple time scale views** - 20yr to 5,120yr cycles displayed simultaneously
+- **Four-season color coding** - Spring (green), Summer (yellow), Autumn (orange), Winter (blue)
+- **Pan and zoom navigation** - Drag to pan, scroll or slider to zoom
+- **Current position indicator** - Shows where we are in the current cycle
+
+### 🚧 Coming Soon
+- Multi-calendar system conversions (Hebrew, Islamic, Buddhist, Hindu, Chinese, Mayan)
+- Community contribution system (Wikipedia-style)
+- Pattern recognition visualization
+- Event filtering and search
+- Larger event database (100+ events)
 
 ## Getting Started
 
@@ -65,15 +74,19 @@ Then open http://localhost:8000 in your browser.
 - HTML5 Canvas
 - No build tools required - runs directly in the browser
 
-## Roadmap
+## Roadmap Progress
 
-- [ ] Historical event markers
-- [ ] Calendar system conversions
-- [ ] User contribution system
-- [ ] Pattern recognition algorithms
-- [ ] Event database
-- [ ] Search and filter
-- [ ] Export/share functionality
+- [x] **Historical event markers** ✅ Phase I Complete
+- [x] **Event detail views** ✅ Phase I Complete
+- [x] **Interactive hover tooltips** ✅ Phase I Complete
+- [ ] Calendar system conversions (Phase II)
+- [ ] User contribution system (Phase II)
+- [ ] Pattern recognition algorithms (Phase III)
+- [ ] Expanded event database (Phase II)
+- [ ] Search and filter (Phase II)
+- [ ] Export/share functionality (Phase III)
+
+See [ROADMAP.md](ROADMAP.md) for the complete development plan across all four phases.
 
 ## Documentation
 

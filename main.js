@@ -42,6 +42,11 @@ class ConchSpiral {
             { years: 5120, label: '64 Saecula', rings: 256 }
         ];
 
+        // Events
+        this.events = [];
+        this.selectedEvent = null;
+        this.hoveredEvent = null;
+
         // Interaction
         this.isDragging = false;
         this.lastMouseX = 0;
@@ -49,6 +54,7 @@ class ConchSpiral {
 
         this.setupInteraction();
         this.updateCycleInfo();
+        this.loadEvents();
     }
 
     resizeCanvas() {
@@ -83,6 +89,9 @@ class ConchSpiral {
                 this.lastMouseX = e.clientX;
                 this.lastMouseY = e.clientY;
                 this.draw();
+            } else {
+                // Check for event hover
+                this.checkEventHover(e);
             }
         });
 
@@ -102,6 +111,166 @@ class ConchSpiral {
             document.getElementById('zoom-slider').value = this.zoom;
             this.draw();
         });
+
+        // Click for event details
+        this.canvas.addEventListener('click', (e) => {
+            if (!this.isDragging && this.hoveredEvent) {
+                this.showEventDetail(this.hoveredEvent);
+            }
+        });
+    }
+
+    async loadEvents() {
+        try {
+            const response = await fetch('data/seed-events.json');
+            this.events = await response.json();
+            this.updateEventCount();
+            this.draw();
+        } catch (error) {
+            console.error('Failed to load events:', error);
+            document.getElementById('event-count').textContent = 'Failed to load events';
+        }
+    }
+
+    updateEventCount() {
+        const countDiv = document.getElementById('event-count');
+        if (this.events && this.events.length > 0) {
+            countDiv.innerHTML = `
+                <p style="font-size: 1.5rem; font-weight: bold; color: var(--spring);">${this.events.length}</p>
+                <p style="font-size: 0.85rem; color: var(--text-dim);">historical events</p>
+            `;
+        } else {
+            countDiv.textContent = 'No events loaded';
+        }
+    }
+
+    getEventPosition(event) {
+        // Calculate the position of an event on the spiral
+        const year = parseInt(event.dates.gregorian.split('-')[0]);
+        const cycleStart = 1945;
+        const yearsSinceCycleStart = year - cycleStart;
+
+        // Determine which turning (season) this event belongs to
+        const seasonMap = {
+            'spring': 0,
+            'summer': 1,
+            'autumn': 2,
+            'winter': 3
+        };
+        const season = seasonMap[event.turning];
+
+        // Determine which ring based on the event's scale
+        const scaleToLevel = {
+            20: 0,
+            80: 1,
+            320: 2,
+            1280: 3,
+            5120: 4
+        };
+        const level = scaleToLevel[event.scale] || 1;
+
+        // Calculate position within the ring
+        const maxRadius = Math.min(this.canvas.width, this.canvas.height) * 0.4 * this.zoom;
+        const baseRadius = 30 * this.zoom;
+        const ringWidth = (maxRadius - baseRadius) / 5;
+        const innerRadius = baseRadius + (level * ringWidth);
+        const outerRadius = innerRadius + ringWidth;
+        const radius = (innerRadius + outerRadius) / 2;
+
+        // Calculate angle based on year within the turning
+        const turningStart = cycleStart + (Math.floor(yearsSinceCycleStart / this.turningLength) * this.turningLength);
+        const yearsIntoTurning = year - turningStart;
+        const progressInTurning = yearsIntoTurning / this.turningLength;
+
+        // Base angle for the season + progress within season
+        const baseAngle = (season * Math.PI / 2) - Math.PI / 2;
+        const angle = baseAngle + (progressInTurning * Math.PI / 2);
+
+        return {
+            x: Math.cos(angle) * radius,
+            y: Math.sin(angle) * radius,
+            radius: 6 * this.zoom,
+            angle,
+            level
+        };
+    }
+
+    checkEventHover(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left - this.centerX - this.offsetX;
+        const mouseY = e.clientY - rect.top - this.centerY - this.offsetY;
+
+        let foundHover = false;
+        for (const event of this.events) {
+            const pos = this.getEventPosition(event);
+            const distance = Math.sqrt(
+                Math.pow(mouseX - pos.x, 2) +
+                Math.pow(mouseY - pos.y, 2)
+            );
+
+            if (distance < pos.radius + 5) {
+                this.hoveredEvent = event;
+                this.canvas.style.cursor = 'pointer';
+                foundHover = true;
+                this.draw();
+                break;
+            }
+        }
+
+        if (!foundHover && this.hoveredEvent) {
+            this.hoveredEvent = null;
+            this.canvas.style.cursor = 'move';
+            this.draw();
+        }
+    }
+
+    showEventDetail(event) {
+        const modal = document.getElementById('event-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalContent = document.getElementById('modal-content');
+
+        // Build multi-calendar date display
+        let dateHTML = '<div class="event-dates">';
+        if (event.dates.gregorian) {
+            dateHTML += `<div><strong>Gregorian:</strong> ${event.dates.gregorian}</div>`;
+        }
+        if (event.dates.islamic) {
+            dateHTML += `<div><strong>Islamic:</strong> ${event.dates.islamic}</div>`;
+        }
+        if (event.dates.hebrew) {
+            dateHTML += `<div><strong>Hebrew:</strong> ${event.dates.hebrew}</div>`;
+        }
+        if (event.dates.julian) {
+            dateHTML += `<div><strong>Julian:</strong> ${event.dates.julian}</div>`;
+        }
+        dateHTML += '</div>';
+
+        // Build categories
+        const categoriesHTML = event.categories
+            .map(cat => `<span class="category-tag">${cat.replace(/_/g, ' ')}</span>`)
+            .join('');
+
+        // Build sources
+        const sourcesHTML = event.sources
+            .map(source => `<li><em>${source.title}</em> by ${source.author} (${source.year})</li>`)
+            .join('');
+
+        modalTitle.textContent = event.title;
+        modalContent.innerHTML = `
+            ${dateHTML}
+            <div class="event-meta">
+                <span class="turning-badge ${event.turning}">${event.turning.toUpperCase()}</span>
+                <span class="significance-badge">${event.significance}</span>
+            </div>
+            <div class="event-categories">${categoriesHTML}</div>
+            <p class="event-description">${event.description}</p>
+            <div class="event-sources">
+                <strong>Sources:</strong>
+                <ul>${sourcesHTML}</ul>
+            </div>
+        `;
+
+        modal.style.display = 'block';
     }
 
     getCurrentSeason(year) {
@@ -223,6 +392,60 @@ class ConchSpiral {
         this.ctx.restore();
     }
 
+    drawEvents() {
+        if (!this.events || this.events.length === 0) return;
+
+        this.ctx.save();
+        this.ctx.translate(this.centerX + this.offsetX, this.centerY + this.offsetY);
+
+        // Draw all events
+        for (const event of this.events) {
+            const pos = this.getEventPosition(event);
+            const isHovered = this.hoveredEvent === event;
+
+            // Get season color
+            const seasonMap = {
+                'spring': this.seasonColors[0],
+                'summer': this.seasonColors[1],
+                'autumn': this.seasonColors[2],
+                'winter': this.seasonColors[3]
+            };
+            const color = seasonMap[event.turning] || '#ffffff';
+
+            // Draw event marker
+            this.ctx.beginPath();
+            this.ctx.arc(pos.x, pos.y, pos.radius, 0, Math.PI * 2);
+            this.ctx.fillStyle = color;
+            this.ctx.fill();
+            this.ctx.strokeStyle = isHovered ? '#ffffff' : '#000000';
+            this.ctx.lineWidth = isHovered ? 3 : 2;
+            this.ctx.stroke();
+
+            // Draw glow effect when hovered
+            if (isHovered) {
+                this.ctx.beginPath();
+                this.ctx.arc(pos.x, pos.y, pos.radius + 4, 0, Math.PI * 2);
+                this.ctx.strokeStyle = color;
+                this.ctx.lineWidth = 2;
+                this.ctx.globalAlpha = 0.5;
+                this.ctx.stroke();
+                this.ctx.globalAlpha = 1.0;
+
+                // Draw event title near marker
+                this.ctx.fillStyle = '#ffffff';
+                this.ctx.font = `bold ${12 * this.zoom}px sans-serif`;
+                this.ctx.textAlign = 'center';
+                this.ctx.fillText(
+                    event.title,
+                    pos.x,
+                    pos.y - pos.radius - 10
+                );
+            }
+        }
+
+        this.ctx.restore();
+    }
+
     draw() {
         // Clear canvas
         this.ctx.fillStyle = '#2d2d2d';
@@ -230,6 +453,9 @@ class ConchSpiral {
 
         // Draw the spiral
         this.drawSpiral();
+
+        // Draw events on top
+        this.drawEvents();
     }
 
     updateCycleInfo() {
@@ -267,5 +493,27 @@ document.addEventListener('DOMContentLoaded', () => {
     calendarSelect.addEventListener('change', (e) => {
         console.log('Calendar system changed to:', e.target.value);
         // TODO: Implement calendar system conversion
+    });
+
+    // Modal close functionality
+    const modal = document.getElementById('event-modal');
+    const closeBtn = document.querySelector('.modal-close');
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+        }
     });
 });

@@ -85,9 +85,20 @@ main {
     border-top: 1px solid var(--text-dim);
 }
 
+.info-panel {
+    margin-bottom: 1.5rem;
+}
+
 .info-panel h3 {
     margin-bottom: 1rem;
     color: var(--spring);
+}
+
+.hint {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-style: italic;
 }
 
 #cycle-info {
@@ -199,6 +210,165 @@ footer {
     border-top: 1px solid var(--bg-medium);
 }
 
+/* Event Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: var(--bg-medium);
+    margin: 5% auto;
+    padding: 2rem;
+    border: 2px solid var(--spring);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.modal-close {
+    color: var(--text-dim);
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: var(--text-light);
+}
+
+#modal-title {
+    margin-bottom: 1rem;
+    color: var(--spring);
+}
+
+.event-dates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: var(--bg-dark);
+    border-radius: 4px;
+}
+
+.event-dates div {
+    font-size: 0.9rem;
+}
+
+.event-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.turning-badge,
+.significance-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.turning-badge.spring {
+    background: var(--spring);
+    color: #000;
+}
+
+.turning-badge.summer {
+    background: var(--summer);
+    color: #000;
+}
+
+.turning-badge.autumn {
+    background: var(--autumn);
+    color: #fff;
+}
+
+.turning-badge.winter {
+    background: var(--winter);
+    color: #fff;
+}
+
+.significance-badge {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    border: 1px solid var(--text-dim);
+}
+
+.event-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.category-tag {
+    padding: 0.25rem 0.5rem;
+    background: var(--bg-dark);
+    border: 1px solid var(--text-dim);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-transform: capitalize;
+}
+
+.event-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.event-sources {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--text-dim);
+}
+
+.event-sources ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+.event-sources li {
+    margin-bottom: 0.5rem;
+    color: var(--text-dim);
+}
+
+.event-sources em {
+    color: var(--text-light);
+}
+
 /* Responsive */
 @media (max-width: 1200px) {
     main {
@@ -209,5 +379,11 @@ footer {
     #timeline-info {
         max-width: 600px;
         margin: 0 auto;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1.5rem;
     }
 }

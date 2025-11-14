@@ -34,6 +34,11 @@
                 <h3>Current Cycle</h3>
                 <div id="cycle-info"></div>
             </div>
+            <div class="info-panel">
+                <h3>Events Loaded</h3>
+                <div id="event-count">Loading...</div>
+                <p class="hint">Hover over markers to see event names. Click to view details.</p>
+            </div>
         </div>
 
         <div id="visualization-container">
@@ -80,6 +85,15 @@
     <footer>
         <p>Contributable timeline • Multiple calendar systems • Cyclical patterns</p>
     </footer>
+
+    <!-- Event Detail Modal -->
+    <div id="event-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-content"></div>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Year0 - Meta-Secular Timeline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Year0</h1>
+        <p class="tagline">Meta-secular timeline recognising historical patterns</p>
+    </header>
+
+    <main>
+        <div id="controls">
+            <div class="control-group">
+                <label for="calendar-select">Calendar System:</label>
+                <select id="calendar-select">
+                    <option value="gregorian">Gregorian (CE)</option>
+                    <option value="hebrew">Hebrew</option>
+                    <option value="islamic">Islamic (Hijri)</option>
+                    <option value="buddhist">Buddhist</option>
+                    <option value="hindu">Hindu (Kali Yuga)</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="mayan">Mayan Long Count</option>
+                </select>
+            </div>
+            <div class="control-group">
+                <label for="zoom-slider">Zoom Level:</label>
+                <input type="range" id="zoom-slider" min="0.5" max="3" step="0.1" value="1">
+            </div>
+            <div class="info-panel">
+                <h3>Current Cycle</h3>
+                <div id="cycle-info"></div>
+            </div>
+        </div>
+
+        <div id="visualization-container">
+            <canvas id="spiral-canvas"></canvas>
+        </div>
+
+        <div id="timeline-info">
+            <h3>The Fourth Turning Cycles</h3>
+            <div class="season-legend">
+                <div class="season spring">
+                    <span class="icon">🌱</span>
+                    <strong>Spring (High)</strong>
+                    <p>Post-crisis rebirth, strong institutions</p>
+                </div>
+                <div class="season summer">
+                    <span class="icon">☀️</span>
+                    <strong>Summer (Awakening)</strong>
+                    <p>Spiritual upheaval, questioning authority</p>
+                </div>
+                <div class="season autumn">
+                    <span class="icon">🍂</span>
+                    <strong>Autumn (Unraveling)</strong>
+                    <p>Weak institutions, strong individualism</p>
+                </div>
+                <div class="season winter">
+                    <span class="icon">❄️</span>
+                    <strong>Winter (Crisis)</strong>
+                    <p>Major upheaval, rebirth through destruction</p>
+                </div>
+            </div>
+            <div class="cycle-scale">
+                <h4>Fractal Time Scales</h4>
+                <ul>
+                    <li><strong>20 years</strong> = 1 Turning</li>
+                    <li><strong>80 years</strong> = 1 Saeculum (4 turnings)</li>
+                    <li><strong>320 years</strong> = 4 Saecula</li>
+                    <li><strong>1,280 years</strong> = 16 Saecula</li>
+                    <li><strong>5,120 years</strong> = 64 Saecula</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Contributable timeline • Multiple calendar systems • Cyclical patterns</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

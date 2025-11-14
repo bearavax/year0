@@ -40,7 +40,7 @@ Events can be mapped across different calendar systems:
 
 ### ✅ Phase I Complete (Foundation)
 - **Interactive conch shell spiral visualization** - Beautiful nested rings representing fractal time scales
-- **Historical event markers** - 6 seed events positioned on the spiral by year and turning
+- **Historical event markers** - 16 pivotal events positioned on the spiral by year and turning
 - **Event detail modals** - Click any event to see full details, multi-calendar dates, and sources
 - **Hover interactions** - Event names appear on hover with glow effects
 - **Multiple time scale views** - 20yr to 5,120yr cycles displayed simultaneously
@@ -54,12 +54,17 @@ Events can be mapped across different calendar systems:
   - Calendar selector updates current year display
   - Event modals show dates in ALL calendars
   - Full documentation in [CALENDARS.md](docs/CALENDARS.md)
+- **Expanded event database** ✅ DONE - 16 pivotal historical events
+  - Geographic diversity: Europe, Middle East, Asia, Americas, Global
+  - All four turnings represented: Spring (High), Summer (Awakening), Autumn (Unraveling), Winter (Crisis)
+  - Multiple time scales: 20yr, 80yr, 320yr cycles
+  - Comprehensive categories: warfare, religious, political, scientific, cultural
 
-### 🚧 Coming Soon
-- Community contribution system (Wikipedia-style)
-- Pattern recognition visualization
+### 🚧 Coming Soon (Phase II Continued)
 - Event filtering and search
-- Larger event database (100+ events)
+- Pattern recognition visualization
+- Community contribution system (Wikipedia-style)
+- Continue expanding to 100+ events
 - Mayan Long Count calendar
 
 ## Getting Started

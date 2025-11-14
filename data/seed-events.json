@@ -13,9 +13,22 @@
     "turning": "winter",
     "significance": "epochal",
     "scale": 80,
-    "categories": ["warfare", "empire_fall", "cultural_awakening"],
-    "regions": ["europe", "middle_east", "mediterranean"],
-    "tags": ["ottoman_empire", "byzantine_empire", "renaissance", "medieval"],
+    "categories": [
+      "warfare",
+      "empire_fall",
+      "cultural_awakening"
+    ],
+    "regions": [
+      "europe",
+      "middle_east",
+      "mediterranean"
+    ],
+    "tags": [
+      "ottoman_empire",
+      "byzantine_empire",
+      "renaissance",
+      "medieval"
+    ],
     "sources": [
       {
         "type": "book",
@@ -67,9 +80,24 @@
     "turning": "winter",
     "significance": "epochal",
     "scale": 320,
-    "categories": ["plague_pandemic", "social_movement", "economic_transformation"],
-    "regions": ["europe", "mediterranean", "middle_east", "asia"],
-    "tags": ["plague", "pandemic", "feudalism", "medieval", "death"],
+    "categories": [
+      "plague_pandemic",
+      "social_movement",
+      "economic_transformation"
+    ],
+    "regions": [
+      "europe",
+      "mediterranean",
+      "middle_east",
+      "asia"
+    ],
+    "tags": [
+      "plague",
+      "pandemic",
+      "feudalism",
+      "medieval",
+      "death"
+    ],
     "sources": [
       {
         "type": "book",
@@ -116,9 +144,21 @@
     "turning": "spring",
     "significance": "epochal",
     "scale": 320,
-    "categories": ["technological_innovation", "cultural_awakening", "religious_movement"],
-    "regions": ["europe"],
-    "tags": ["printing_press", "gutenberg", "literacy", "reformation", "renaissance"],
+    "categories": [
+      "technological_innovation",
+      "cultural_awakening",
+      "religious_movement"
+    ],
+    "regions": [
+      "europe"
+    ],
+    "tags": [
+      "printing_press",
+      "gutenberg",
+      "literacy",
+      "reformation",
+      "renaissance"
+    ],
     "sources": [
       {
         "type": "book",
@@ -163,9 +203,21 @@
     "turning": "summer",
     "significance": "global",
     "scale": 80,
-    "categories": ["political_revolution", "philosophical_shift", "empire_rise"],
-    "regions": ["north_america"],
-    "tags": ["revolution", "enlightenment", "democracy", "independence", "founding_fathers"],
+    "categories": [
+      "political_revolution",
+      "philosophical_shift",
+      "empire_rise"
+    ],
+    "regions": [
+      "north_america"
+    ],
+    "tags": [
+      "revolution",
+      "enlightenment",
+      "democracy",
+      "independence",
+      "founding_fathers"
+    ],
     "sources": [
       {
         "type": "primary",
@@ -212,9 +264,21 @@
     "turning": "winter",
     "significance": "epochal",
     "scale": 80,
-    "categories": ["warfare", "political_revolution", "technological_innovation"],
-    "regions": ["global"],
-    "tags": ["world_war_ii", "atomic_bomb", "united_nations", "cold_war", "holocaust"],
+    "categories": [
+      "warfare",
+      "political_revolution",
+      "technological_innovation"
+    ],
+    "regions": [
+      "global"
+    ],
+    "tags": [
+      "world_war_ii",
+      "atomic_bomb",
+      "united_nations",
+      "cold_war",
+      "holocaust"
+    ],
     "sources": [
       {
         "type": "book",
@@ -259,9 +323,22 @@
     "turning": "autumn",
     "significance": "global",
     "scale": 80,
-    "categories": ["political_revolution", "empire_fall", "social_movement"],
-    "regions": ["europe", "global"],
-    "tags": ["cold_war", "berlin_wall", "communism", "democracy", "unification"],
+    "categories": [
+      "political_revolution",
+      "empire_fall",
+      "social_movement"
+    ],
+    "regions": [
+      "europe",
+      "global"
+    ],
+    "tags": [
+      "cold_war",
+      "berlin_wall",
+      "communism",
+      "democracy",
+      "unification"
+    ],
     "sources": [
       {
         "type": "book",
@@ -274,6 +351,603 @@
         "title": "There We Stood, Here We Stand: Eleven Lutherans Rediscover Their Catholic Roots",
         "author": "Frederick W. Taylor",
         "year": 1991
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "7",
+    "title": "French Revolution Begins",
+    "description": "The storming of the Bastille marked the beginning of the French Revolution, one of the most transformative events in modern history. This Summer Awakening challenged absolute monarchy, feudalism, and the Catholic Church's authority. It introduced concepts of liberty, equality, and fraternity that would reshape political thought worldwide. The revolution led to the Reign of Terror, the rise of Napoleon, and eventually inspired democratic movements across Europe and the Americas.",
+    "dates": {
+      "gregorian": "1789-07-14",
+      "islamic": "1203-03-21",
+      "hebrew": "5549-04-21"
+    },
+    "dateRange": false,
+    "turning": "summer",
+    "significance": "epochal",
+    "scale": 80,
+    "categories": [
+      "political_revolution",
+      "social_movement",
+      "philosophical_shift"
+    ],
+    "regions": [
+      "europe",
+      "western_europe"
+    ],
+    "tags": [
+      "revolution",
+      "enlightenment",
+      "monarchy",
+      "democracy"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "Citizens: A Chronicle of the French Revolution",
+        "author": "Simon Schama",
+        "year": 1989
+      },
+      {
+        "type": "book",
+        "title": "The French Revolution: From Enlightenment to Tyranny",
+        "author": "Ian Davidson",
+        "year": 2016
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "8",
+    "title": "Muhammad's Hijra to Medina",
+    "description": "The Prophet Muhammad's migration (Hijra) from Mecca to Medina marks year 1 of the Islamic calendar. This journey transformed Islam from a persecuted faith into a thriving community and political entity. In Medina, Muhammad established the Constitution of Medina, creating one of the earliest known written constitutions and a multi-religious state. The Hijra represents a Spring rebirth—a new beginning that would lead to Islam becoming one of the world's major religions.",
+    "dates": {
+      "gregorian": "622-07-16",
+      "islamic": "1-01-01",
+      "julian": "622-07-19"
+    },
+    "dateRange": false,
+    "turning": "spring",
+    "significance": "epochal",
+    "scale": 320,
+    "categories": [
+      "religious_movement",
+      "migration",
+      "political_revolution"
+    ],
+    "regions": [
+      "middle_east",
+      "arabia"
+    ],
+    "tags": [
+      "islam",
+      "prophet",
+      "hijra",
+      "medina",
+      "mecca"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "Muhammad: His Life Based on the Earliest Sources",
+        "author": "Martin Lings",
+        "year": 1983
+      },
+      {
+        "type": "book",
+        "title": "In the Footsteps of the Prophet",
+        "author": "Tariq Ramadan",
+        "year": 2007
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "9",
+    "title": "Spanish Flu Pandemic",
+    "description": "The 1918-1920 influenza pandemic infected one-third of the world's population and killed an estimated 50-100 million people—more than World War I itself. Occurring at the end of WWI, this Winter Crisis accelerated social changes including women's suffrage (as women replaced men in healthcare), public health reforms, and international cooperation. The pandemic exposed the interconnectedness of the modern world and the need for global health infrastructure.",
+    "dates": {
+      "gregorian": "1918-03-01"
+    },
+    "dateRange": true,
+    "endDate": {
+      "gregorian": "1920-12-31"
+    },
+    "turning": "winter",
+    "significance": "global",
+    "scale": 80,
+    "categories": [
+      "plague_pandemic",
+      "social_movement"
+    ],
+    "regions": [
+      "global"
+    ],
+    "tags": [
+      "pandemic",
+      "influenza",
+      "world_war_i",
+      "public_health"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The Great Influenza",
+        "author": "John M. Barry",
+        "year": 2004
+      },
+      {
+        "type": "book",
+        "title": "Pale Rider: The Spanish Flu of 1918",
+        "author": "Laura Spinney",
+        "year": 2017
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "10",
+    "title": "Moon Landing (Apollo 11)",
+    "description": "NASA's Apollo 11 mission successfully landed humans on the Moon for the first time. Neil Armstrong and Buzz Aldrin walked on the lunar surface while Michael Collins orbited above. Armstrong's words 'That's one small step for man, one giant leap for mankind' captured the magnitude of the achievement. This Summer Awakening moment demonstrated technological capability, won the Space Race for America, and inspired a generation to look beyond Earth. It represented the triumph of science, cooperation, and human ambition.",
+    "dates": {
+      "gregorian": "1969-07-20",
+      "islamic": "1389-05-06",
+      "hebrew": "5729-04-07"
+    },
+    "dateRange": false,
+    "turning": "summer",
+    "significance": "global",
+    "scale": 80,
+    "categories": [
+      "technological_innovation",
+      "exploration",
+      "cultural_awakening"
+    ],
+    "regions": [
+      "global",
+      "north_america"
+    ],
+    "tags": [
+      "space",
+      "apollo",
+      "nasa",
+      "moon",
+      "cold_war"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "A Man on the Moon",
+        "author": "Andrew Chaikin",
+        "year": 1994
+      },
+      {
+        "type": "primary",
+        "title": "Apollo 11 Mission Report",
+        "author": "NASA",
+        "year": 1969
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "11",
+    "title": "9/11 Terrorist Attacks",
+    "description": "Al-Qaeda terrorists hijacked four commercial airplanes, crashing two into the World Trade Center towers in New York and one into the Pentagon. A fourth plane, United Flight 93, crashed in Pennsylvania after passengers fought back. Nearly 3,000 people died. This Autumn Unraveling event catalyzed the War on Terror, invasions of Afghanistan and Iraq, massive security apparatus expansion, and a fundamental shift in American foreign policy. It revealed the vulnerability of even the world's most powerful nation to asymmetric warfare and accelerated cultural polarization.",
+    "dates": {
+      "gregorian": "2001-09-11",
+      "islamic": "1422-06-23",
+      "hebrew": "5761-06-23"
+    },
+    "dateRange": false,
+    "turning": "autumn",
+    "significance": "global",
+    "scale": 80,
+    "categories": [
+      "warfare",
+      "political_revolution"
+    ],
+    "regions": [
+      "north_america",
+      "global"
+    ],
+    "tags": [
+      "terrorism",
+      "war_on_terror",
+      "afghanistan",
+      "iraq"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The 9/11 Commission Report",
+        "author": "National Commission on Terrorist Attacks",
+        "year": 2004
+      },
+      {
+        "type": "book",
+        "title": "The Looming Tower: Al-Qaeda and the Road to 9/11",
+        "author": "Lawrence Wright",
+        "year": 2006
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "12",
+    "title": "First Crusade Captures Jerusalem",
+    "description": "After a brutal three-year campaign, Christian crusaders captured Jerusalem from the Fatimid Caliphate, establishing the Kingdom of Jerusalem. The conquest involved massive civilian casualties and marked a watershed in Christian-Muslim relations. This Winter Crisis event initiated centuries of religious warfare, cultural exchange, and animosity between Europe and the Middle East. The Crusades brought Islamic knowledge (mathematics, medicine, philosophy) to Europe while creating lasting wounds between civilizations.",
+    "dates": {
+      "gregorian": "1099-07-15",
+      "julian": "1099-07-08",
+      "islamic": "492-07-22",
+      "hebrew": "4859-04-29"
+    },
+    "dateRange": false,
+    "turning": "winter",
+    "significance": "epochal",
+    "scale": 320,
+    "categories": [
+      "warfare",
+      "religious_movement"
+    ],
+    "regions": [
+      "middle_east",
+      "europe",
+      "mediterranean"
+    ],
+    "tags": [
+      "crusades",
+      "jerusalem",
+      "christianity",
+      "islam",
+      "medieval"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The First Crusade: A New History",
+        "author": "Thomas Asbridge",
+        "year": 2004
+      },
+      {
+        "type": "book",
+        "title": "God's War: A New History of the Crusades",
+        "author": "Christopher Tyerman",
+        "year": 2006
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "13",
+    "title": "Magna Carta Signed",
+    "description": "King John of England signed the Magna Carta at Runnymede, limiting royal power and establishing that everyone, including the king, is subject to the law. Though initially a peace treaty between the king and rebellious barons, it became the foundation for constitutional government and individual rights. The Magna Carta influenced the U.S. Constitution, the Universal Declaration of Human Rights, and legal systems worldwide. This Spring High document planted seeds that would grow into modern democracy.",
+    "dates": {
+      "gregorian": "1215-06-15",
+      "julian": "1215-06-08",
+      "islamic": "611-12-26",
+      "hebrew": "4975-03-10"
+    },
+    "dateRange": false,
+    "turning": "spring",
+    "significance": "epochal",
+    "scale": 320,
+    "categories": [
+      "political_revolution",
+      "philosophical_shift"
+    ],
+    "regions": [
+      "europe",
+      "western_europe"
+    ],
+    "tags": [
+      "democracy",
+      "rights",
+      "constitution",
+      "england",
+      "medieval"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "Magna Carta: The Birth of Liberty",
+        "author": "Dan Jones",
+        "year": 2014
+      },
+      {
+        "type": "primary",
+        "title": "Magna Carta",
+        "author": "King John of England",
+        "year": 1215
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "14",
+    "title": "Chinese Revolution (Communist Victory)",
+    "description": "Mao Zedong's Communist Party defeated the Nationalist government, establishing the People's Republic of China. This Winter Crisis ended decades of civil war and Japanese occupation, fundamentally reshaping the world's most populous nation. The revolution led to radical social transformation, the Great Leap Forward, the Cultural Revolution, and eventually China's rise as a global superpower. It represented the largest communist revolution in history and shifted the global balance of power during the Cold War.",
+    "dates": {
+      "gregorian": "1949-10-01",
+      "islamic": "1368-11-19",
+      "hebrew": "5710-06-19"
+    },
+    "dateRange": false,
+    "turning": "winter",
+    "significance": "epochal",
+    "scale": 80,
+    "categories": [
+      "political_revolution",
+      "empire_rise",
+      "warfare"
+    ],
+    "regions": [
+      "asia",
+      "east_asia"
+    ],
+    "tags": [
+      "communism",
+      "mao",
+      "china",
+      "cold_war",
+      "revolution"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "The Chinese Revolution in Historical Perspective",
+        "author": "John King Fairbank",
+        "year": 2006
+      },
+      {
+        "type": "book",
+        "title": "Mao: The Unknown Story",
+        "author": "Jung Chang & Jon Halliday",
+        "year": 2005
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "15",
+    "title": "Martin Luther's 95 Theses",
+    "description": "Martin Luther nailed his 95 Theses to the church door in Wittenberg, challenging the Catholic Church's sale of indulgences and papal authority. This Summer Awakening sparked the Protestant Reformation, fracturing Western Christianity and catalyzing religious wars, the Counter-Reformation, and the rise of individual conscience in matters of faith. The Reformation transformed not only religion but also politics, economics (Protestant work ethic), literacy (vernacular Bible), and the concept of individual rights.",
+    "dates": {
+      "gregorian": "1517-10-31",
+      "julian": "1517-10-21",
+      "islamic": "923-07-09",
+      "hebrew": "5278-08-18"
+    },
+    "dateRange": false,
+    "turning": "summer",
+    "significance": "epochal",
+    "scale": 320,
+    "categories": [
+      "religious_movement",
+      "cultural_awakening",
+      "philosophical_shift"
+    ],
+    "regions": [
+      "europe",
+      "western_europe"
+    ],
+    "tags": [
+      "reformation",
+      "protestantism",
+      "luther",
+      "christianity",
+      "renaissance"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "Martin Luther: Renegade and Prophet",
+        "author": "Lyndal Roper",
+        "year": 2016
+      },
+      {
+        "type": "primary",
+        "title": "95 Theses",
+        "author": "Martin Luther",
+        "year": 1517
+      }
+    ],
+    "contributors": [
+      {
+        "id": "seed",
+        "name": "Year0 Seed Data",
+        "role": "author",
+        "timestamp": "2025-01-15T00:00:00Z"
+      }
+    ],
+    "metadata": {
+      "verified": true,
+      "verificationCount": 3,
+      "created": "2025-01-15T00:00:00Z",
+      "lastModified": "2025-01-15T00:00:00Z",
+      "version": 1,
+      "language": "en"
+    }
+  },
+  {
+    "id": "16",
+    "title": "Indian Independence",
+    "description": "India gained independence from British colonial rule after nearly 200 years, led by Mahatma Gandhi's nonviolent resistance movement. Partition simultaneously created Pakistan, causing one of the largest mass migrations in history (10-20 million people) and horrific communal violence (1-2 million deaths). This Spring High moment inspired decolonization movements worldwide and established the world's largest democracy. Independence also marked the end of the British Empire as a global hegemon.",
+    "dates": {
+      "gregorian": "1947-08-15",
+      "islamic": "1366-09-22",
+      "hebrew": "5707-05-29"
+    },
+    "dateRange": false,
+    "turning": "spring",
+    "significance": "epochal",
+    "scale": 80,
+    "categories": [
+      "political_revolution",
+      "empire_fall",
+      "social_movement"
+    ],
+    "regions": [
+      "asia",
+      "south_asia"
+    ],
+    "tags": [
+      "independence",
+      "gandhi",
+      "india",
+      "pakistan",
+      "decolonization"
+    ],
+    "sources": [
+      {
+        "type": "book",
+        "title": "India After Gandhi",
+        "author": "Ramachandra Guha",
+        "year": 2007
+      },
+      {
+        "type": "book",
+        "title": "Freedom at Midnight",
+        "author": "Larry Collins & Dominique Lapierre",
+        "year": 1975
       }
     ],
     "contributors": [

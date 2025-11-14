@@ -48,12 +48,19 @@ Events can be mapped across different calendar systems:
 - **Pan and zoom navigation** - Drag to pan, scroll or slider to zoom
 - **Current position indicator** - Shows where we are in the current cycle
 
+### ✅ Phase II In Progress (The Archive)
+- **Multi-calendar system conversions** ✅ DONE - Hebrew, Islamic, Buddhist, Hindu, Chinese, Julian
+  - Live conversion of any event date to 7 calendar systems
+  - Calendar selector updates current year display
+  - Event modals show dates in ALL calendars
+  - Full documentation in [CALENDARS.md](docs/CALENDARS.md)
+
 ### 🚧 Coming Soon
-- Multi-calendar system conversions (Hebrew, Islamic, Buddhist, Hindu, Chinese, Mayan)
 - Community contribution system (Wikipedia-style)
 - Pattern recognition visualization
 - Event filtering and search
 - Larger event database (100+ events)
+- Mayan Long Count calendar
 
 ## Getting Started
 
@@ -79,7 +86,15 @@ Then open http://localhost:8000 in your browser.
 - [x] **Historical event markers** ✅ Phase I Complete
 - [x] **Event detail views** ✅ Phase I Complete
 - [x] **Interactive hover tooltips** ✅ Phase I Complete
-- [ ] Calendar system conversions (Phase II)
+- [x] **Calendar system conversions** ✅ Phase II In Progress
+  - [x] Gregorian (CE)
+  - [x] Hebrew (Jewish)
+  - [x] Islamic (Hijri)
+  - [x] Buddhist
+  - [x] Hindu (Kali Yuga)
+  - [x] Chinese (Sexagenary)
+  - [x] Julian
+  - [ ] Mayan Long Count (Phase II continued)
 - [ ] User contribution system (Phase II)
 - [ ] Pattern recognition algorithms (Phase III)
 - [ ] Expanded event database (Phase II)
@@ -94,8 +109,10 @@ See [ROADMAP.md](ROADMAP.md) for the complete development plan across all four p
 - **[ROADMAP.md](ROADMAP.md)** - Complete development plan: Internet Archive meets Library of Alexandria
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** - How to contribute (Wikipedia-style collaboration)
 - **[docs/PATTERNS.md](docs/PATTERNS.md)** - Pattern recognition system and historical echoes
+- **[docs/CALENDARS.md](docs/CALENDARS.md)** - Multi-calendar system explained (7 calendars supported)
 
 ### 📐 Technical Specifications
+- **[calendars.js](calendars.js)** - Calendar conversion engine (7 systems)
 - **[data/schema.js](data/schema.js)** - Event database schema and validation
 - **[data/seed-events.json](data/seed-events.json)** - Initial historical events dataset
 

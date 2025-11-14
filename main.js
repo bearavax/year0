@@ -47,6 +47,10 @@ class ConchSpiral {
         this.selectedEvent = null;
         this.hoveredEvent = null;
 
+        // Calendar system
+        this.calendarConverter = new CalendarConverter();
+        this.currentCalendar = 'gregorian';
+
         // Interaction
         this.isDragging = false;
         this.lastMouseX = 0;
@@ -229,20 +233,34 @@ class ConchSpiral {
         const modalTitle = document.getElementById('modal-title');
         const modalContent = document.getElementById('modal-content');
 
-        // Build multi-calendar date display
+        // Build multi-calendar date display with live conversion
         let dateHTML = '<div class="event-dates">';
-        if (event.dates.gregorian) {
-            dateHTML += `<div><strong>Gregorian:</strong> ${event.dates.gregorian}</div>`;
+
+        // Always show Gregorian
+        dateHTML += `<div><strong>Gregorian (CE):</strong> ${event.dates.gregorian}</div>`;
+
+        // Show stored dates or convert on-the-fly
+        const calendars = [
+            { key: 'hebrew', name: 'Hebrew' },
+            { key: 'islamic', name: 'Islamic (Hijri)' },
+            { key: 'buddhist', name: 'Buddhist' },
+            { key: 'hindu', name: 'Hindu (Kali Yuga)' },
+            { key: 'chinese', name: 'Chinese' },
+            { key: 'julian', name: 'Julian' }
+        ];
+
+        for (const cal of calendars) {
+            let dateStr;
+            if (event.dates[cal.key]) {
+                // Use pre-stored date
+                dateStr = event.dates[cal.key];
+            } else {
+                // Convert on-the-fly
+                dateStr = this.calendarConverter.convertEventDate(event, cal.key);
+            }
+            dateHTML += `<div><strong>${cal.name}:</strong> ${dateStr}</div>`;
         }
-        if (event.dates.islamic) {
-            dateHTML += `<div><strong>Islamic:</strong> ${event.dates.islamic}</div>`;
-        }
-        if (event.dates.hebrew) {
-            dateHTML += `<div><strong>Hebrew:</strong> ${event.dates.hebrew}</div>`;
-        }
-        if (event.dates.julian) {
-            dateHTML += `<div><strong>Julian:</strong> ${event.dates.julian}</div>`;
-        }
+
         dateHTML += '</div>';
 
         // Build categories
@@ -466,8 +484,17 @@ class ConchSpiral {
         const yearsUntilNextTurning = this.turningLength - yearInTurning;
 
         const infoDiv = document.getElementById('cycle-info');
+
+        // Get current year in selected calendar
+        const currentYearInCalendar = this.currentCalendar === 'gregorian'
+            ? this.currentYear
+            : this.calendarConverter.convert(
+                `${this.currentYear}-01-01`,
+                this.currentCalendar
+            ).split(' ')[0]; // Extract just the year part
+
         infoDiv.innerHTML = `
-            <p><strong>Current Year:</strong> ${this.currentYear}</p>
+            <p><strong>Current Year:</strong> ${currentYearInCalendar}</p>
             <p><strong>Current Turning:</strong> ${this.seasonNames[currentSeason]}</p>
             <p><strong>Years in Turning:</strong> ${yearInTurning} / ${this.turningLength}</p>
             <p><strong>Years to Next:</strong> ${yearsUntilNextTurning}</p>
@@ -475,6 +502,12 @@ class ConchSpiral {
                 <strong>Cycle Start:</strong> ${cycleStart} (Post-WWII)
             </p>
         `;
+    }
+
+    changeCalendar(calendar) {
+        this.currentCalendar = calendar;
+        this.updateCycleInfo();
+        // Could add more calendar-specific UI updates here
     }
 }
 
@@ -488,11 +521,11 @@ document.addEventListener('DOMContentLoaded', () => {
         spiral.draw();
     });
 
-    // Calendar system selector (placeholder for future implementation)
+    // Calendar system selector
     const calendarSelect = document.getElementById('calendar-select');
     calendarSelect.addEventListener('change', (e) => {
+        spiral.changeCalendar(e.target.value);
         console.log('Calendar system changed to:', e.target.value);
-        // TODO: Implement calendar system conversion
     });
 
     // Modal close functionality
